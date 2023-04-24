@@ -47,14 +47,14 @@ print("Hola" , print("tu!!"))#SE CONSIDERA MALA PRÁCTICA
 # Usando parentesis redondos, cuadrados o llaves
 # se puede escribir en varios renglones 
 #===================================================
-list = [1, 2, 3, 4,
+lista= [1, 2, 3, 4,
         5, 6, 7, 8,
         9, 10, 11, 12]
 
 matriz = [ [1,2,3,4] , [5,6,7,8] , [9,10,11,12] ]
 #Las matrices siempre son los corchetes dentro de otros corchetes
 
-print(list)
+print(lista)
 print(matriz)
 
 #===================================================================
@@ -63,7 +63,7 @@ print(matriz)
 if 10>5:
   print("diez es mayor que cinco")
   print("otra identación")
-for i in list:
+for i in lista:
    print(i)
    print("ok")
 if 10>5:
@@ -360,7 +360,7 @@ print(potencial[100])
 #=================
 # Condicionales
 #=================
-preci = 50
+precio = 50
 #-------------
 # Si esto...
 #-------------
@@ -452,9 +452,9 @@ for pair in numNames.items():
 for k, v in numNames.items():
     print("key = " , k , ", value =" , v)
 
-#============================
-# Parte 2 video 3
-#============================
+#===============================
+# Parte 2 video 3 "Funciones"
+#===============================
 
 #===================
 # Primera función
@@ -507,3 +507,34 @@ a = 123
 print(type(a))
 saludos(a)
 
+#=================================
+# Función con muchos argumentos
+#=================================
+def saludos_multiples(nombre1 , nombre2 , nombre3):
+    """Esta función saluda a 3 personas al mismo tiempo"""
+    print("Hola " , nombre1 , "," , nombre2 , "y" , nombre3)
+saludos_multiples("Hugo" , "Paco" , "Luis")
+
+#==============================================
+# Función con cualquier número de argumentos
+#==============================================
+def muchos_saludos(*nombres):
+    """Esta función saluda a todos los que quieras"""
+    i = 0
+    #====================================
+    # end = es para ponerlo de corrido
+    #====================================
+    print("Hola " , end = "")
+    while len(nombres) > i:
+        # Último nombre
+        if (i == len(nombres)-1):
+            print(nombres[i])
+        else:
+            # Cualquier otro nombre
+            print(nombres[i] , end = ", ")
+        i+=1
+
+muchos_saludos("Bosco" , "Angel" , "David" , "Tamara" , "Mili" , "Edwin" , "Lev" , "Luis" , "Abigail")
+
+def greet(firstname , lastname):
+    print('Hello' , firstname , lastname)
