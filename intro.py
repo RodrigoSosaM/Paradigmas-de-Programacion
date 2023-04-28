@@ -641,4 +641,77 @@ for i in range(n , 0 , -1):
 if flag == True:
     s = 1/s
 print(s)
-    
+
+
+#============
+# VIDEO 4 
+#============
+
+
+#====================================
+# PROGRAMACIÓN ORIENTADA A OBJETOS
+#====================================
+
+#==================================
+# Una clase para un objeto vacío
+# NO está tan vacio, necesita
+# la palabra pass = pasar
+#==================================
+class objetoVacio:
+    pass
+
+#==========================
+# nada es un objetoVacio
+#==========================
+nada = objetoVacio()
+print(type(nada))
+
+#===================
+# La clase llanta
+#===================
+class llanta:
+    #=======================================
+    # Variable cuenta es de toda la clase
+    #=======================================
+    cuenta = 0
+    #======================================
+    # Función construcutora de identidad
+    # __init__ es una función reservada
+    # comienza con uno mismo: self
+    # pero puede ser otro nombre (mi)
+    # parámetros de entrada = default
+    #======================================
+    def __init__(mi , radio = 50 , ancho = 30 , presión = 1.5):
+        # variable de la estructura cdompleta llanta
+        llanta.cuenta += 1
+        # variables exclusivas de cada objeto
+        mi.radio = radio
+        mi.ancho = ancho
+        mi.presión = presión
+
+#=========================
+# Objetos (instaciados)
+#=========================
+llanta1 = llanta(50 , 30 , 1.5)
+llanta2 = llanta(presión = 1.2)
+llanta3 = llanta()
+llanta4 = llanta(40 , 30 , 1.6)
+
+#=====================================
+# Objeto que contiene otros objetos
+#=====================================
+class coche:
+    def __init__(mi , ll1 , ll2 , ll3 , ll4):
+        mi.llanta1 = ll1
+        mi.llanta2 = ll2
+        mi.llanta3 = ll3
+        mi.llanta4 = ll4
+
+micoche = coche(llanta1 , llanta2 , llanta3 , llanta4)
+
+print("Total de llantas: " , llanta.cuenta) # Variable global de la clase
+print("Presión de la llanta 4 = " , llanta4.presión) # Presión de la llanta 4
+print("Radio de la llanta 4 = " , llanta4.radio)
+print("Radio de la llanta 3 = " , llanta3.radio)
+print("Presión de la llanta 1 de mi coche = " , micoche.llanta1.presión)
+
