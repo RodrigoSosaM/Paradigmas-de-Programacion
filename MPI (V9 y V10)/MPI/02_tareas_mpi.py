@@ -20,7 +20,7 @@ size = comm.Get_size()
 # Quien soy
 #=============
 
-rank = comm.Get.rank()
+rank = comm.Get_rank()
 
 #===============================
 # Si yo soy el cero hago esto
