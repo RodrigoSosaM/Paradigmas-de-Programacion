@@ -12,9 +12,9 @@ n = 10
 # sumado con un escalar (en cada entrada)
 #===========================================
 
-senderray = numpy.zeros(n , dtype = 'i')+rank
+sendarray = numpy.zeros(n , dtype = 'i')+rank
 
-recvarry = None
+recvarray = None
 
 if rank == 0:
 

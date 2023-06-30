@@ -37,7 +37,7 @@ if __name__ == "__main__":
     # Matriz de 10x3 números al azar
     #==================================
 
-    params = np.random.random((10, 3))*100.0
+    params = np.random.random((10,3))*100.0
     results = []
     ts = time.time()
 
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         # termine correr get_result
         #=======================================
 
-        pool.apply_async(my_function , args = (i , params[i , 0] , params[i , l] params[i , 2]) , callback = get_result)
+        pool.apply_async(my_function , args = (i , params[i , 0] , params[i , 1] params[i , 2]) , callback = get_result)
 
         #===================
         # Cerrar el grupo

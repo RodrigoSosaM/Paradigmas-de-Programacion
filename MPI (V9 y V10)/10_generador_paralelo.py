@@ -2,23 +2,23 @@ from multiprocessing import Process
 import random
 import os
 
-N:int = 10
+N: int = 10
 
-def generador(N:float) -> None:
+def generador(N: float ) -> None:
     semilla:float = random.uniform(-1 , 1)
     print("La semilla es: " , semilla)
     random.seed(semilla)
-
     for i in range(N):
         x:float = random.uniform(-1 , 1)
         y:float = random.uniform(-1 , 1)
-        print("x = " , x , "\t  y = " , y)
+        print("x = " , x , "\t y= " , y)
 
-procesos = []
+
+procesos=[]
 cpus = os.cpu_count()
-print("Procesadores = " , cpus)
+print("Porcesadores = " , cpus)
 for i in range(cpus):
-    procesos.append(Process(target = generador , args = (N , )))
+    procesos.append(Process(target = generador , args=(N , )))
 
 #=====================================
 # Comienza los procesos en paralelo
