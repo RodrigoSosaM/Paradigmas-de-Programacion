@@ -37,7 +37,7 @@ print("Tiempo incluyendo compilación = %s" % (end-start))
 start = time.time()
 rapido(x)
 end = time.time()
-print("Tiempo de ejecución usando numba = %s" % end-start))
+print("Tiempo de ejecución usando numba = %s" % ( end-start))
 
 #============================
 # Función sin optimización

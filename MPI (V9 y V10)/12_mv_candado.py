@@ -17,7 +17,7 @@ def montecarlo(N:float , resultado:Value , lock:Lock) -> None:
 
             if (x*x + y*y) < 1.0:
                 dentro += 1
-     with lock:
+    with lock:
          resultado.value += dentro
 
 if __name__ == "__main__":

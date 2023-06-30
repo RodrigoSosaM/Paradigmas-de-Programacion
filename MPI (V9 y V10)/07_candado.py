@@ -6,7 +6,7 @@ from multiprocessing import Process , Value , Lock
 import time
 
 def sumale100(numero , candado):
-    for i in rang(100):
+    for i in range(100):
         time.sleep(0.01)
 
         #====================
@@ -32,6 +32,8 @@ if __name__ == "__main__":
     #====================================================
     # Candado para evitar que dos procesos se empalmen
     #====================================================
+    
+    candado = Lock()
 
     #===============================================================
     # Número común a los procesos, i de entero, comienza siendo 0
