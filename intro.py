@@ -940,8 +940,6 @@ objetoD = D(4.0 , 5.0 , objetoA)
 print(objetoD.sumar_todo())
 
 
-#===========||
-# VIDEO 5
-#===========||
-
-
+#===============================================================||
+# Apartir del Video 5 todo esta distribuido en otras carpetas
+#===============================================================||
