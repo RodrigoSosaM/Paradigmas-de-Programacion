@@ -34,6 +34,7 @@ print("Tiempo incluyendo compilación = %s" % (end-start))
 #=============================================================
 # La segunda llamada es para obtener el tiempo de ejecución
 #=============================================================
+
 start = time.time()
 rapido(x)
 end = time.time()
@@ -42,6 +43,7 @@ print("Tiempo de ejecución usando numba = %s" % ( end-start))
 #============================
 # Función sin optimización
 #============================
+
 start = time.time()
 lento(x)
 end = time.time()
